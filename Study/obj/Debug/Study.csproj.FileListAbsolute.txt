@@ -1,0 +1,14 @@
+C:\Users\nikir\source\repos\Study\bin\Debug\Study.exe.config
+C:\Users\nikir\source\repos\Study\bin\Debug\Study.exe
+C:\Users\nikir\source\repos\Study\bin\Debug\Study.pdb
+C:\Users\nikir\source\repos\Study\obj\Debug\Study.Properties.Resources.resources
+C:\Users\nikir\source\repos\Study\obj\Debug\Study.csproj.GenerateResource.cache
+C:\Users\nikir\source\repos\Study\obj\Debug\Study.csproj.CoreCompileInputs.cache
+C:\Users\nikir\source\repos\Study\obj\Debug\Study.exe
+C:\Users\nikir\source\repos\Study\obj\Debug\Study.pdb
+C:\Users\nikir\source\repos\Study\obj\Debug\Study.Login.resources
+C:\Users\nikir\source\repos\Study\obj\Debug\Study.Student.resources
+C:\Users\nikir\source\repos\Study\obj\Debug\Study.Teacher.resources
+C:\Users\nikir\source\repos\Study\obj\Debug\Study.Groups.resources
+C:\Users\nikir\source\repos\Study\obj\Debug\Study.Dictionary.resources
+C:\Users\nikir\source\repos\Study\obj\Debug\Study.csprojAssemblyReference.cache
