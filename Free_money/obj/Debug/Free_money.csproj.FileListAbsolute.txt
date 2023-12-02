@@ -13,3 +13,16 @@ C:\Users\nikir\source\repos\Free_money\obj\Debug\Free_money.User.resources
 C:\Users\nikir\source\repos\Free_money\obj\Debug\Free_money.AddEditUser.resources
 C:\Users\nikir\source\repos\Free_money\obj\Debug\Free_money.Form1.resources
 C:\Users\nikir\source\repos\Free_money\obj\Debug\Free_money.csproj.CopyComplete
+D:\БГУИР КУРСАЧ\Free_money\bin\Debug\Free_money.exe.config
+D:\БГУИР КУРСАЧ\Free_money\bin\Debug\Free_money.exe
+D:\БГУИР КУРСАЧ\Free_money\bin\Debug\Free_money.pdb
+D:\БГУИР КУРСАЧ\Free_money\obj\Debug\Free_money.csprojAssemblyReference.cache
+D:\БГУИР КУРСАЧ\Free_money\obj\Debug\Free_money.Admin.resources
+D:\БГУИР КУРСАЧ\Free_money\obj\Debug\Free_money.Login.resources
+D:\БГУИР КУРСАЧ\Free_money\obj\Debug\Free_money.AddEditUser.resources
+D:\БГУИР КУРСАЧ\Free_money\obj\Debug\Free_money.Properties.Resources.resources
+D:\БГУИР КУРСАЧ\Free_money\obj\Debug\Free_money.User.resources
+D:\БГУИР КУРСАЧ\Free_money\obj\Debug\Free_money.csproj.GenerateResource.cache
+D:\БГУИР КУРСАЧ\Free_money\obj\Debug\Free_money.csproj.CoreCompileInputs.cache
+D:\БГУИР КУРСАЧ\Free_money\obj\Debug\Free_money.exe
+D:\БГУИР КУРСАЧ\Free_money\obj\Debug\Free_money.pdb

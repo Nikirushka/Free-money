@@ -80,9 +80,10 @@
             this.Profile.Controls.Add(this.surname_add);
             this.Profile.Controls.Add(this.Add_Surname);
             this.Profile.Controls.Add(this.Add);
-            this.Profile.Location = new System.Drawing.Point(12, 12);
+            this.Profile.Location = new System.Drawing.Point(9, 10);
+            this.Profile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Profile.Name = "Profile";
-            this.Profile.Size = new System.Drawing.Size(326, 384);
+            this.Profile.Size = new System.Drawing.Size(244, 312);
             this.Profile.TabIndex = 6;
             this.Profile.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Profile_MouseDown);
             this.Profile.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Profile_MouseMove);
@@ -96,9 +97,10 @@
             this.change_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.change_button.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.change_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.change_button.Location = new System.Drawing.Point(169, 338);
+            this.change_button.Location = new System.Drawing.Point(127, 275);
+            this.change_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.change_button.Name = "change_button";
-            this.change_button.Size = new System.Drawing.Size(128, 43);
+            this.change_button.Size = new System.Drawing.Size(96, 35);
             this.change_button.TabIndex = 39;
             this.change_button.Text = "Изменить";
             this.change_button.UseVisualStyleBackColor = false;
@@ -110,9 +112,10 @@
             this.nickname_add.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.nickname_add.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nickname_add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(164)))));
-            this.nickname_add.Location = new System.Drawing.Point(97, 272);
+            this.nickname_add.Location = new System.Drawing.Point(73, 221);
+            this.nickname_add.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nickname_add.Name = "nickname_add";
-            this.nickname_add.Size = new System.Drawing.Size(106, 24);
+            this.nickname_add.Size = new System.Drawing.Size(87, 19);
             this.nickname_add.TabIndex = 38;
             this.nickname_add.Text = "Псевдоним";
             // 
@@ -122,9 +125,10 @@
             this.Add_Nickname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Add_Nickname.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Add_Nickname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(42)))), ((int)(((byte)(63)))));
-            this.Add_Nickname.Location = new System.Drawing.Point(101, 296);
+            this.Add_Nickname.Location = new System.Drawing.Point(76, 240);
+            this.Add_Nickname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Add_Nickname.Name = "Add_Nickname";
-            this.Add_Nickname.Size = new System.Drawing.Size(128, 31);
+            this.Add_Nickname.Size = new System.Drawing.Size(97, 26);
             this.Add_Nickname.TabIndex = 37;
             // 
             // Close_button
@@ -136,9 +140,10 @@
             this.Close_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.Close_button.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Close_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.Close_button.Location = new System.Drawing.Point(31, 338);
+            this.Close_button.Location = new System.Drawing.Point(23, 275);
+            this.Close_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Close_button.Name = "Close_button";
-            this.Close_button.Size = new System.Drawing.Size(128, 43);
+            this.Close_button.Size = new System.Drawing.Size(96, 35);
             this.Close_button.TabIndex = 36;
             this.Close_button.Text = "Отмена";
             this.Close_button.UseVisualStyleBackColor = false;
@@ -155,9 +160,10 @@
             this.Add_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.Add_button.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Add_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.Add_button.Location = new System.Drawing.Point(169, 338);
+            this.Add_button.Location = new System.Drawing.Point(127, 275);
+            this.Add_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Add_button.Name = "Add_button";
-            this.Add_button.Size = new System.Drawing.Size(128, 43);
+            this.Add_button.Size = new System.Drawing.Size(96, 35);
             this.Add_button.TabIndex = 35;
             this.Add_button.Text = "Добавить";
             this.Add_button.UseVisualStyleBackColor = false;
@@ -171,9 +177,10 @@
             this.password_add.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.password_add.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.password_add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(164)))));
-            this.password_add.Location = new System.Drawing.Point(165, 214);
+            this.password_add.Location = new System.Drawing.Point(124, 174);
+            this.password_add.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.password_add.Name = "password_add";
-            this.password_add.Size = new System.Drawing.Size(72, 24);
+            this.password_add.Size = new System.Drawing.Size(60, 19);
             this.password_add.TabIndex = 34;
             this.password_add.Text = "Пароль";
             // 
@@ -183,9 +190,10 @@
             this.Add_Password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Add_Password.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Add_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(42)))), ((int)(((byte)(63)))));
-            this.Add_Password.Location = new System.Drawing.Point(169, 238);
+            this.Add_Password.Location = new System.Drawing.Point(127, 193);
+            this.Add_Password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Add_Password.Name = "Add_Password";
-            this.Add_Password.Size = new System.Drawing.Size(128, 31);
+            this.Add_Password.Size = new System.Drawing.Size(97, 26);
             this.Add_Password.TabIndex = 33;
             // 
             // login_add
@@ -194,9 +202,10 @@
             this.login_add.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.login_add.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.login_add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(164)))));
-            this.login_add.Location = new System.Drawing.Point(27, 214);
+            this.login_add.Location = new System.Drawing.Point(20, 174);
+            this.login_add.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.login_add.Name = "login_add";
-            this.login_add.Size = new System.Drawing.Size(62, 24);
+            this.login_add.Size = new System.Drawing.Size(51, 19);
             this.login_add.TabIndex = 32;
             this.login_add.Text = "Логин";
             // 
@@ -206,9 +215,10 @@
             this.Add_Login.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Add_Login.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Add_Login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(42)))), ((int)(((byte)(63)))));
-            this.Add_Login.Location = new System.Drawing.Point(31, 238);
+            this.Add_Login.Location = new System.Drawing.Point(23, 193);
+            this.Add_Login.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Add_Login.Name = "Add_Login";
-            this.Add_Login.Size = new System.Drawing.Size(128, 31);
+            this.Add_Login.Size = new System.Drawing.Size(97, 26);
             this.Add_Login.TabIndex = 31;
             // 
             // phone_add
@@ -217,9 +227,10 @@
             this.phone_add.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.phone_add.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.phone_add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(164)))));
-            this.phone_add.Location = new System.Drawing.Point(27, 154);
+            this.phone_add.Location = new System.Drawing.Point(20, 125);
+            this.phone_add.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.phone_add.Name = "phone_add";
-            this.phone_add.Size = new System.Drawing.Size(87, 24);
+            this.phone_add.Size = new System.Drawing.Size(71, 19);
             this.phone_add.TabIndex = 30;
             this.phone_add.Text = "Телефон";
             // 
@@ -229,9 +240,10 @@
             this.Add_Phone.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Add_Phone.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Add_Phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(42)))), ((int)(((byte)(63)))));
-            this.Add_Phone.Location = new System.Drawing.Point(31, 178);
+            this.Add_Phone.Location = new System.Drawing.Point(23, 145);
+            this.Add_Phone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Add_Phone.Name = "Add_Phone";
-            this.Add_Phone.Size = new System.Drawing.Size(168, 31);
+            this.Add_Phone.Size = new System.Drawing.Size(127, 26);
             this.Add_Phone.TabIndex = 29;
             // 
             // email_add
@@ -240,9 +252,10 @@
             this.email_add.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.email_add.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.email_add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(164)))));
-            this.email_add.Location = new System.Drawing.Point(165, 93);
+            this.email_add.Location = new System.Drawing.Point(124, 76);
+            this.email_add.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.email_add.Name = "email_add";
-            this.email_add.Size = new System.Drawing.Size(59, 24);
+            this.email_add.Size = new System.Drawing.Size(49, 19);
             this.email_add.TabIndex = 28;
             this.email_add.Text = "E-mail";
             // 
@@ -252,9 +265,10 @@
             this.Add_Email.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Add_Email.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Add_Email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(42)))), ((int)(((byte)(63)))));
-            this.Add_Email.Location = new System.Drawing.Point(169, 117);
+            this.Add_Email.Location = new System.Drawing.Point(127, 95);
+            this.Add_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Add_Email.Name = "Add_Email";
-            this.Add_Email.Size = new System.Drawing.Size(128, 31);
+            this.Add_Email.Size = new System.Drawing.Size(97, 26);
             this.Add_Email.TabIndex = 27;
             // 
             // patronymic_add
@@ -263,9 +277,10 @@
             this.patronymic_add.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.patronymic_add.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.patronymic_add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(164)))));
-            this.patronymic_add.Location = new System.Drawing.Point(27, 93);
+            this.patronymic_add.Location = new System.Drawing.Point(20, 76);
+            this.patronymic_add.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.patronymic_add.Name = "patronymic_add";
-            this.patronymic_add.Size = new System.Drawing.Size(87, 24);
+            this.patronymic_add.Size = new System.Drawing.Size(71, 19);
             this.patronymic_add.TabIndex = 26;
             this.patronymic_add.Text = "Отчество";
             // 
@@ -275,9 +290,10 @@
             this.Add_Patronymic.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Add_Patronymic.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Add_Patronymic.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(42)))), ((int)(((byte)(63)))));
-            this.Add_Patronymic.Location = new System.Drawing.Point(31, 117);
+            this.Add_Patronymic.Location = new System.Drawing.Point(23, 95);
+            this.Add_Patronymic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Add_Patronymic.Name = "Add_Patronymic";
-            this.Add_Patronymic.Size = new System.Drawing.Size(128, 31);
+            this.Add_Patronymic.Size = new System.Drawing.Size(97, 26);
             this.Add_Patronymic.TabIndex = 25;
             // 
             // age_add
@@ -286,9 +302,10 @@
             this.age_add.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.age_add.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.age_add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(164)))));
-            this.age_add.Location = new System.Drawing.Point(205, 154);
+            this.age_add.Location = new System.Drawing.Point(154, 125);
+            this.age_add.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.age_add.Name = "age_add";
-            this.age_add.Size = new System.Drawing.Size(73, 24);
+            this.age_add.Size = new System.Drawing.Size(60, 19);
             this.age_add.TabIndex = 24;
             this.age_add.Text = "Возраст";
             // 
@@ -298,9 +315,10 @@
             this.Add_Age.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Add_Age.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Add_Age.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(42)))), ((int)(((byte)(63)))));
-            this.Add_Age.Location = new System.Drawing.Point(209, 178);
+            this.Add_Age.Location = new System.Drawing.Point(157, 145);
+            this.Add_Age.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Add_Age.Name = "Add_Age";
-            this.Add_Age.Size = new System.Drawing.Size(88, 31);
+            this.Add_Age.Size = new System.Drawing.Size(67, 26);
             this.Add_Age.TabIndex = 23;
             // 
             // name_add
@@ -309,9 +327,10 @@
             this.name_add.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.name_add.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.name_add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(164)))));
-            this.name_add.Location = new System.Drawing.Point(165, 30);
+            this.name_add.Location = new System.Drawing.Point(124, 24);
+            this.name_add.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.name_add.Name = "name_add";
-            this.name_add.Size = new System.Drawing.Size(44, 24);
+            this.name_add.Size = new System.Drawing.Size(36, 19);
             this.name_add.TabIndex = 22;
             this.name_add.Text = "Имя";
             // 
@@ -321,9 +340,10 @@
             this.Add_Name.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Add_Name.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Add_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(42)))), ((int)(((byte)(63)))));
-            this.Add_Name.Location = new System.Drawing.Point(169, 54);
+            this.Add_Name.Location = new System.Drawing.Point(127, 44);
+            this.Add_Name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Add_Name.Name = "Add_Name";
-            this.Add_Name.Size = new System.Drawing.Size(128, 31);
+            this.Add_Name.Size = new System.Drawing.Size(97, 26);
             this.Add_Name.TabIndex = 21;
             // 
             // surname_add
@@ -332,9 +352,10 @@
             this.surname_add.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.surname_add.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.surname_add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(164)))));
-            this.surname_add.Location = new System.Drawing.Point(27, 30);
+            this.surname_add.Location = new System.Drawing.Point(20, 24);
+            this.surname_add.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.surname_add.Name = "surname_add";
-            this.surname_add.Size = new System.Drawing.Size(84, 24);
+            this.surname_add.Size = new System.Drawing.Size(69, 19);
             this.surname_add.TabIndex = 20;
             this.surname_add.Text = "Фамилия";
             // 
@@ -344,9 +365,10 @@
             this.Add_Surname.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Add_Surname.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Add_Surname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(42)))), ((int)(((byte)(63)))));
-            this.Add_Surname.Location = new System.Drawing.Point(31, 54);
+            this.Add_Surname.Location = new System.Drawing.Point(23, 44);
+            this.Add_Surname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Add_Surname.Name = "Add_Surname";
-            this.Add_Surname.Size = new System.Drawing.Size(128, 31);
+            this.Add_Surname.Size = new System.Drawing.Size(97, 26);
             this.Add_Surname.TabIndex = 19;
             // 
             // Add
@@ -355,23 +377,25 @@
             this.Add.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Add.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Add.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(42)))), ((int)(((byte)(63)))));
-            this.Add.Location = new System.Drawing.Point(3, 6);
+            this.Add.Location = new System.Drawing.Point(2, 5);
+            this.Add.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(320, 24);
+            this.Add.Size = new System.Drawing.Size(240, 20);
             this.Add.TabIndex = 18;
             this.Add.Text = "ДОБАВЛЕНИЕ ПОЛЬЗОВАТЕЛЯ";
             this.Add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AddEditUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(164)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(358, 408);
+            this.ClientSize = new System.Drawing.Size(268, 332);
             this.Controls.Add(this.Profile);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddEditUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NewUser";
