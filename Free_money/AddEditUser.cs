@@ -63,6 +63,15 @@ namespace Free_money
                 }
                 reader.Close();
                 connection.Close();
+                int gender=1;
+                if(comboBox1.Text=="Man")
+                {
+                    gender = 1;
+                }
+                else
+                {
+                    gender = 2;
+                }
                 if (check == 1)
                 {
                     MessageBox.Show("Пользователь с таким логином существует!\nПридумайте другой :)", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
@@ -71,11 +80,11 @@ namespace Free_money
                 {
                     if (who == 0)
                     {
-                        query = $"insert into users values(N'{Add_Name.Text}',N'{Add_Surname.Text}',N'{Add_Patronymic.Text}',N'{Add_Nickname.Text}',N'{Add_Login.Text}',N'{Add_Password.Text}',N'{Add_Email.Text}',N'{Add_Phone.Text}',{Add_Age.Text},GETDATE(),0)";
+                        query = $"insert into users values(N'{Add_Name.Text}',N'{Add_Surname.Text}',N'{Add_Patronymic.Text}',N'{Add_Nickname.Text}',N'{Add_Login.Text}',N'{Add_Password.Text}',N'{Add_Email.Text}',N'{Add_Phone.Text}',{Add_Age.Text},{gender},2)";
                     }
                     else
                     {
-                        query = $"insert into users values(N'{Add_Name.Text}',N'{Add_Surname.Text}',N'{Add_Patronymic.Text}',N'{Add_Nickname.Text}',N'{Add_Login.Text}',N'{Add_Password.Text}',N'{Add_Email.Text}',N'{Add_Phone.Text}',{Add_Age.Text},GETDATE(),1)";
+                        query = $"insert into users values(N'{Add_Name.Text}',N'{Add_Surname.Text}',N'{Add_Patronymic.Text}',N'{Add_Nickname.Text}',N'{Add_Login.Text}',N'{Add_Password.Text}',N'{Add_Email.Text}',N'{Add_Phone.Text}',{Add_Age.Text},{gender},1)";
                     }
                     connection.Open();
                    cmd = new SqlCommand(query, connection);
@@ -158,13 +167,22 @@ namespace Free_money
                 }
                 reader.Close();
                 connection.Close();
+                int gender = 1;
+                if (comboBox1.Text == "Man")
+                {
+                    gender = 1;
+                }
+                else
+                {
+                    gender = 2;
+                }
                 if (check == 1)
                 {
                     MessageBox.Show("Пользователь с таким логином существует!\nПридумайте другой :)", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1, MessageBoxOptions.DefaultDesktopOnly);
                 }
                 else
                 {
-                    query = $"update users set Name=N'{Add_Name.Text}',Surname=N'{Add_Surname.Text}',Patronymic=N'{Add_Patronymic.Text}',Nickname=N'{Add_Nickname.Text}',Login=N'{Add_Login.Text}',Password=N'{Add_Password.Text}',e_mail=N'{Add_Email.Text}',Phone=N'{Add_Phone.Text}',Age={Add_Age.Text} where id_user={logiin}";
+                    query = $"update users set Name=N'{Add_Name.Text}',Surname=N'{Add_Surname.Text}',Patronymic=N'{Add_Patronymic.Text}',Nickname=N'{Add_Nickname.Text}',Login=N'{Add_Login.Text}',Password=N'{Add_Password.Text}',e_mail=N'{Add_Email.Text}',Phone=N'{Add_Phone.Text}',Age={Add_Age.Text},ID_gender={gender} where id_user={logiin}";
                     connection.Open();
                     cmd = new SqlCommand(query, connection);
                     cmd.ExecuteNonQuery();
@@ -179,5 +197,7 @@ namespace Free_money
                 MessageBox.Show(ex.Message);
             }
         }
+
+       
     }
 }

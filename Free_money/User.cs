@@ -84,7 +84,16 @@ namespace Free_money
                     Edit_Phone.Text = reader.GetString(8).Trim();
                     Age.Text = reader.GetInt32(9).ToString() + " лет";
                     Edit_Age.Text = reader.GetInt32(9).ToString();
-                    DateRegAndStatus.Text = "Дата регистрации : " + reader.GetDateTime(10).ToShortDateString() + " Статус : Пользователь"; 
+                    string gender="Мужчина";
+                    if (reader.GetInt32(10) == 1)
+                    {
+                        gender = "Мужчина";
+                    }
+                    else
+                    {
+                        gender = "Женщина";
+                    }
+                    DateRegAndStatus.Text = $" Статус : Пользователь, Пол : {gender}"; 
                 }
                 connection.Close();
             }
@@ -198,7 +207,7 @@ namespace Free_money
             }
             try
             {
-                string query = $"select Critetion,Sum,Date,Commentary,Operation,ID_money_operations from Money_operations join wallet on Wallet.ID_wallet=Money_operations.ID_wallet join users on users.ID_user=Wallet.ID_user where Users.Login=N'{Login1.Text}'";
+                string query = $"select crit.title,Sum,Date,Commentary,operation_critetion.title,ID_money_operations from Money_operations join Operation_critetion on operation_critetion.id_operation=Money_operations.id_operation join Crit on Crit.id_crit=Money_operations.id_Critetion join wallet on Wallet.ID_wallet=Money_operations.ID_wallet join users on users.ID_user=Wallet.ID_user where Users.Login=N'{Login1.Text}'";
                 dataoperations.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dataoperations.AllowUserToAddRows = false;
 
@@ -564,6 +573,16 @@ namespace Free_money
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void pictureBox4_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox4.Image = Properties.Resources.close2;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.Image = Properties.Resources.close;
         }
     }
 }

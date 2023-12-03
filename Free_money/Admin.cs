@@ -815,5 +815,15 @@ namespace Free_money
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void pictureBox4_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox4.Image = Properties.Resources.close2;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.Image = Properties.Resources.close;
+        }
     }
 }

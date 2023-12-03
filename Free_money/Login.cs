@@ -57,7 +57,7 @@ namespace Free_money
                     {
                         this.Hide();
                         reader.Close();
-                        query = $"SELECT * FROM Users WHERE (Login=N'{LoginTB}'COLLATE CYRILLIC_General_CS_AS) AND (Password= '{PasswordTB}' COLLATE CYRILLIC_General_CS_AS) AND Status=1";
+                        query = $"SELECT * FROM Users WHERE (Login=N'{LoginTB}'COLLATE CYRILLIC_General_CS_AS) AND (Password= '{PasswordTB}' COLLATE CYRILLIC_General_CS_AS) AND ID_status=1";
                         cmd = new SqlCommand(query, connection);
                         reader = cmd.ExecuteReader();
                         if (reader.HasRows)
@@ -90,7 +90,7 @@ namespace Free_money
                         else
                         {
                             reader.Close();
-                            query = $"SELECT * FROM Users WHERE (Login=N'{LoginTB}'COLLATE CYRILLIC_General_CS_AS) AND (Password= '{PasswordTB}' COLLATE CYRILLIC_General_CS_AS) AND Status=0";
+                            query = $"SELECT * FROM Users WHERE (Login=N'{LoginTB}'COLLATE CYRILLIC_General_CS_AS) AND (Password= '{PasswordTB}' COLLATE CYRILLIC_General_CS_AS) AND ID_Status=2";
                             cmd = new SqlCommand(query, connection);
                             reader = cmd.ExecuteReader();
                             if (reader.HasRows)
@@ -175,6 +175,16 @@ namespace Free_money
             {
                 this.Close();
             }
+        }
+
+        private void pictureBox4_MouseEnter(object sender, EventArgs e)
+        {
+            pictureBox4.Image = Properties.Resources.close2;
+        }
+
+        private void pictureBox4_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox4.Image = Properties.Resources.close;
         }
     }
 }
