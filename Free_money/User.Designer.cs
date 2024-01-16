@@ -76,9 +76,10 @@
             this.Nickname = new System.Windows.Forms.Label();
             this.Wallet = new System.Windows.Forms.Panel();
             this.new_wallet = new System.Windows.Forms.Panel();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.currency = new System.Windows.Forms.ComboBox();
             this.edit_currency = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.currency = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.delete_wallet = new System.Windows.Forms.Button();
@@ -87,8 +88,6 @@
             this.datawallets = new System.Windows.Forms.DataGridView();
             this.Operations = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -98,7 +97,6 @@
             this.list = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.del_operation = new System.Windows.Forms.Button();
@@ -122,6 +120,8 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
             this.statik = new System.Windows.Forms.DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.operat = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.profile.SuspendLayout();
             this.Profile2.SuspendLayout();
@@ -748,7 +748,7 @@
             this.Wallet.Controls.Add(this.edit_wallet);
             this.Wallet.Controls.Add(this.add_wallet);
             this.Wallet.Controls.Add(this.datawallets);
-            this.Wallet.Location = new System.Drawing.Point(475, 184);
+            this.Wallet.Location = new System.Drawing.Point(460, 171);
             this.Wallet.Margin = new System.Windows.Forms.Padding(2);
             this.Wallet.Name = "Wallet";
             this.Wallet.Size = new System.Drawing.Size(428, 320);
@@ -756,16 +756,39 @@
             // 
             // new_wallet
             // 
+            this.new_wallet.Controls.Add(this.textBox10);
+            this.new_wallet.Controls.Add(this.currency);
             this.new_wallet.Controls.Add(this.edit_currency);
             this.new_wallet.Controls.Add(this.label8);
-            this.new_wallet.Controls.Add(this.currency);
             this.new_wallet.Controls.Add(this.button2);
             this.new_wallet.Controls.Add(this.button1);
-            this.new_wallet.Location = new System.Drawing.Point(137, 65);
+            this.new_wallet.Location = new System.Drawing.Point(137, 38);
             this.new_wallet.Margin = new System.Windows.Forms.Padding(2);
             this.new_wallet.Name = "new_wallet";
-            this.new_wallet.Size = new System.Drawing.Size(146, 136);
+            this.new_wallet.Size = new System.Drawing.Size(156, 200);
             this.new_wallet.TabIndex = 40;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox10.Location = new System.Drawing.Point(13, 71);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(133, 29);
+            this.textBox10.TabIndex = 47;
+            this.textBox10.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox10_KeyPress);
+            // 
+            // currency
+            // 
+            this.currency.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.currency.FormattingEnabled = true;
+            this.currency.Items.AddRange(new object[] {
+            "RUB",
+            "BYN",
+            "$"});
+            this.currency.Location = new System.Drawing.Point(13, 28);
+            this.currency.Name = "currency";
+            this.currency.Size = new System.Drawing.Size(133, 32);
+            this.currency.TabIndex = 46;
             // 
             // edit_currency
             // 
@@ -776,7 +799,7 @@
             this.edit_currency.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.edit_currency.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.edit_currency.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.edit_currency.Location = new System.Drawing.Point(2, 55);
+            this.edit_currency.Location = new System.Drawing.Point(7, 109);
             this.edit_currency.Margin = new System.Windows.Forms.Padding(2);
             this.edit_currency.Name = "edit_currency";
             this.edit_currency.Size = new System.Drawing.Size(139, 35);
@@ -791,24 +814,12 @@
             this.label8.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label8.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(-1, 6);
+            this.label8.Location = new System.Drawing.Point(3, 6);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 19);
+            this.label8.Size = new System.Drawing.Size(123, 19);
             this.label8.TabIndex = 44;
-            this.label8.Text = "Валюта";
-            // 
-            // currency
-            // 
-            this.currency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.currency.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.currency.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.currency.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(42)))), ((int)(((byte)(63)))));
-            this.currency.Location = new System.Drawing.Point(2, 25);
-            this.currency.Margin = new System.Windows.Forms.Padding(2);
-            this.currency.Name = "currency";
-            this.currency.Size = new System.Drawing.Size(140, 26);
-            this.currency.TabIndex = 43;
+            this.label8.Text = "Валюта и баланс";
             // 
             // button2
             // 
@@ -819,7 +830,7 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.button2.Location = new System.Drawing.Point(2, 95);
+            this.button2.Location = new System.Drawing.Point(7, 150);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(139, 35);
@@ -837,7 +848,7 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.button1.Location = new System.Drawing.Point(2, 55);
+            this.button1.Location = new System.Drawing.Point(7, 109);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(139, 35);
@@ -922,7 +933,7 @@
             this.Operations.Controls.Add(this.edit_operation);
             this.Operations.Controls.Add(this.add_operation);
             this.Operations.Controls.Add(this.dataoperations);
-            this.Operations.Location = new System.Drawing.Point(565, 84);
+            this.Operations.Location = new System.Drawing.Point(177, 45);
             this.Operations.Margin = new System.Windows.Forms.Padding(2);
             this.Operations.Name = "Operations";
             this.Operations.Size = new System.Drawing.Size(428, 320);
@@ -930,8 +941,8 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.label14);
-            this.panel8.Controls.Add(this.textBox4);
+            this.panel8.Controls.Add(this.operat);
+            this.panel8.Controls.Add(this.comboBox1);
             this.panel8.Controls.Add(this.label13);
             this.panel8.Controls.Add(this.label12);
             this.panel8.Controls.Add(this.textBox3);
@@ -941,7 +952,6 @@
             this.panel8.Controls.Add(this.list);
             this.panel8.Controls.Add(this.button3);
             this.panel8.Controls.Add(this.label9);
-            this.panel8.Controls.Add(this.textBox1);
             this.panel8.Controls.Add(this.button4);
             this.panel8.Controls.Add(this.button5);
             this.panel8.Location = new System.Drawing.Point(80, 26);
@@ -950,38 +960,13 @@
             this.panel8.Size = new System.Drawing.Size(268, 223);
             this.panel8.TabIndex = 40;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.label14.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(-1, 149);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(123, 57);
-            this.label14.TabIndex = 54;
-            this.label14.Text = "Операция : \r\n1 - плюс дньги\r\n0 - минус деньги";
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.textBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox4.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(42)))), ((int)(((byte)(63)))));
-            this.textBox4.Location = new System.Drawing.Point(2, 121);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(140, 26);
-            this.textBox4.TabIndex = 53;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.label13.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(-1, 99);
+            this.label13.Location = new System.Drawing.Point(50, 111);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(76, 19);
@@ -1070,7 +1055,7 @@
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button3.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.button3.Location = new System.Drawing.Point(146, 124);
+            this.button3.Location = new System.Drawing.Point(16, 176);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(112, 35);
@@ -1092,18 +1077,6 @@
             this.label9.TabIndex = 44;
             this.label9.Text = "Критерий";
             // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(42)))), ((int)(((byte)(63)))));
-            this.textBox1.Location = new System.Drawing.Point(2, 25);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 26);
-            this.textBox1.TabIndex = 43;
-            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(164)))));
@@ -1113,7 +1086,7 @@
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button4.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.button4.Location = new System.Drawing.Point(146, 163);
+            this.button4.Location = new System.Drawing.Point(147, 176);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(112, 35);
@@ -1131,7 +1104,7 @@
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.button5.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.button5.Location = new System.Drawing.Point(146, 124);
+            this.button5.Location = new System.Drawing.Point(16, 176);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(112, 35);
@@ -1453,6 +1426,36 @@
             this.statik.Size = new System.Drawing.Size(417, 139);
             this.statik.TabIndex = 4;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Comic Sans MS", 10.2F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Зарплата",
+            "Подарок",
+            "Оплата проезда",
+            "Оплата кафе",
+            "Оплата дома",
+            "Оплата продуктов"});
+            this.comboBox1.Location = new System.Drawing.Point(3, 25);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(139, 27);
+            this.comboBox1.TabIndex = 54;
+            // 
+            // operat
+            // 
+            this.operat.Font = new System.Drawing.Font("Comic Sans MS", 10.2F);
+            this.operat.FormattingEnabled = true;
+            this.operat.Items.AddRange(new object[] {
+            "Доход",
+            "Расход"});
+            this.operat.Location = new System.Drawing.Point(64, 132);
+            this.operat.Margin = new System.Windows.Forms.Padding(2);
+            this.operat.Name = "operat";
+            this.operat.Size = new System.Drawing.Size(139, 27);
+            this.operat.TabIndex = 55;
+            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1555,7 +1558,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel new_wallet;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox currency;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button edit_currency;
@@ -1568,7 +1570,6 @@
         private System.Windows.Forms.ComboBox list;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label13;
@@ -1577,8 +1578,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel stat;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.DataGridView statik;
@@ -1596,5 +1595,9 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.ComboBox currency;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox operat;
     }
 }

@@ -29,7 +29,6 @@ D:\БГУИР КУРСАЧ\Free_money\obj\Debug\Free_money.pdb
 D:\БГУИР КУРСАЧ БД\Free_money\bin\Debug\Free_money.exe.config
 D:\БГУИР КУРСАЧ БД\Free_money\bin\Debug\Free_money.exe
 D:\БГУИР КУРСАЧ БД\Free_money\bin\Debug\Free_money.pdb
-D:\БГУИР КУРСАЧ БД\Free_money\obj\Debug\Free_money.csproj.AssemblyReference.cache
 D:\БГУИР КУРСАЧ БД\Free_money\obj\Debug\Free_money.Admin.resources
 D:\БГУИР КУРСАЧ БД\Free_money\obj\Debug\Free_money.Login.resources
 D:\БГУИР КУРСАЧ БД\Free_money\obj\Debug\Free_money.AddEditUser.resources

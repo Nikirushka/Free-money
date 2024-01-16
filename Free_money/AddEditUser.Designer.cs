@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEditUser));
             this.Profile = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.change_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.nickname_add = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.surname_add = new System.Windows.Forms.Label();
             this.Add_Surname = new System.Windows.Forms.TextBox();
             this.Add = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Profile.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -92,6 +92,18 @@
             this.Profile.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Profile_MouseDown);
             this.Profile.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Profile_MouseMove);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Man",
+            "Woman"});
+            this.comboBox1.Location = new System.Drawing.Point(126, 248);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(98, 21);
+            this.comboBox1.TabIndex = 40;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // change_button
             // 
             this.change_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(164)))));
@@ -101,7 +113,7 @@
             this.change_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
             this.change_button.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.change_button.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(245)))), ((int)(((byte)(247)))));
-            this.change_button.Location = new System.Drawing.Point(127, 275);
+            this.change_button.Location = new System.Drawing.Point(129, 276);
             this.change_button.Margin = new System.Windows.Forms.Padding(2);
             this.change_button.Name = "change_button";
             this.change_button.Size = new System.Drawing.Size(96, 35);
@@ -401,17 +413,6 @@
             this.Add.TabIndex = 18;
             this.Add.Text = "ДОБАВЛЕНИЕ ПОЛЬЗОВАТЕЛЯ";
             this.Add.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Man",
-            "Woman"});
-            this.comboBox1.Location = new System.Drawing.Point(126, 248);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(98, 21);
-            this.comboBox1.TabIndex = 40;
             // 
             // AddEditUser
             // 

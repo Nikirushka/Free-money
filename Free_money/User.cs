@@ -160,7 +160,7 @@ namespace Free_money
         {
             try
             {
-                string query = $"select * from info_wallets where login=N'{Login1.Text}'";
+                string query = $"select * from info_about_your_wallets where login=N'{Login1.Text}'";
                 datawallets.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 datawallets.AllowUserToAddRows = false;
 
@@ -207,7 +207,7 @@ namespace Free_money
             }
             try
             {
-                string query = $"select crit.title,Sum,Date,Commentary,operation_critetion.title,ID_money_operations from Money_operations join Operation_critetion on operation_critetion.id_operation=Money_operations.id_operation join Crit on Crit.id_crit=Money_operations.id_Critetion join wallet on Wallet.ID_wallet=Money_operations.ID_wallet join users on users.ID_user=Wallet.ID_user where Users.Login=N'{Login1.Text}'";
+                string query = $"select * from info_about_your_operations where Login=N'{Login1.Text}'";
                 dataoperations.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dataoperations.AllowUserToAddRows = false;
 
@@ -241,11 +241,30 @@ namespace Free_money
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             try
             {
+                int moneyballance = 0;
+                int currency_id = 0;
+                if(textBox10.Text=="")
+                {
+                    moneyballance = 0;
+                }    else
+                {
+                    moneyballance = Convert.ToInt32(textBox10.Text);
+                }
+                if (currency.Text == "BYN")
+                {
+                    currency_id = 3;
+                }
+                else if (currency.Text == "RUB")
+                {
+                    currency_id = 2;
+                }
+                else currency_id = 1;
                 connection = new SqlConnection(connectionString);
                 connection.Open();
-                    string query = $"insert into wallet values({id_user},0,GETDATE(),N'{currency.Text}')";
+                    string query = $"insert into wallet values({id_user},N'{moneyballance}',N'{currency_id}')";
                     cmd = new SqlCommand(query, connection);
                     cmd.ExecuteNonQuery();
                     connection.Close();
@@ -320,8 +339,11 @@ namespace Free_money
                 {
                     index = cell.RowIndex;
                 }
-                string choose_wallet = (datawallets[4, index].Value.ToString());
-                string delQuery = $"DELETE FROM wallet WHERE id_wallet = {choose_wallet}";
+                string choose_wallet = (datawallets[0, index].Value.ToString());
+                string delQuery = $"DELETE FROM Money_operations WHERE id_wallet = {choose_wallet}";
+                cmd = new SqlCommand(delQuery, connection);
+                cmd.ExecuteNonQuery();
+                delQuery = $"DELETE FROM wallet WHERE id_wallet = {choose_wallet}";
                 cmd = new SqlCommand(delQuery, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
@@ -344,7 +366,8 @@ namespace Free_money
                 index = cell.RowIndex;
             }
             currency.Text = (datawallets[3, index].Value.ToString());
-            choose_wallet_id = (datawallets[4, index].Value.ToString());
+            choose_wallet_id = (datawallets[0, index].Value.ToString());
+            textBox10.Text = (datawallets[2, index].Value.ToString());
         }
 
         private void edit_currency_Click(object sender, EventArgs e)
@@ -353,8 +376,27 @@ namespace Free_money
             {
                 connection = new SqlConnection(connectionString);
                 connection.Open();
-                
-                string delQuery = $"update wallet set currency=N'{currency.Text}' where id_wallet={choose_wallet_id} ";
+                int currency_id = 0;
+                int newbalance = 0;
+             
+                if (textBox10.Text == "")
+                {
+                    newbalance = 0;
+                }
+                else
+                {
+                    newbalance = Convert.ToInt32(textBox10.Text);
+                }
+                if (currency.Text == "BYN")
+                {
+                    currency_id = 3;
+                }
+                else if (currency.Text == "RUB")
+                {
+                    currency_id = 2;
+                }
+                else currency_id = 1;
+                string delQuery = $"update wallet set ID_currency=N'{currency_id}', balance =N'{newbalance}' where id_wallet={choose_wallet_id} ";
                 cmd = new SqlCommand(delQuery, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
@@ -377,9 +419,41 @@ namespace Free_money
         {
             try
             {
+
+                int crit = 1;
+                int oper = 1;
+                if (operat.Text == "Доход")
+                {
+                    oper = 1;
+                }
+                else oper = 2;
+                if (comboBox1.Text == "Зарплата")
+                {
+                    crit = 1;
+                }
+                else if (currency.Text == "Подарок")
+                {
+                    crit = 2;
+                }
+                else if (currency.Text == "Оплата проезда")
+                {
+                    crit = 3;
+                }
+                else if (currency.Text == "Оплата кафе")
+                {
+                    crit = 4;
+                }
+                else if (currency.Text == "Оплата дома")
+                {
+                    crit = 5;
+                }
+                else if (currency.Text == "Оплата продуктов")
+                {
+                    crit = 6;
+                }else crit = 1;
                 connection = new SqlConnection(connectionString);
                 connection.Open();
-                string query = $"insert into money_operations values({list.Text},N'{textBox1.Text}','{textBox3.Text}',GETDATE(),N'{textBox2.Text}',{textBox4.Text})";
+                string query = $"insert into money_operations values({list.Text},N'{crit}','{textBox3.Text}',GETDATE(),N'{textBox2.Text}',{oper})";
                 cmd = new SqlCommand(query, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
@@ -408,10 +482,11 @@ namespace Free_money
             {
                 index = cell.RowIndex;
             }
-            textBox1.Text = (dataoperations[0, index].Value.ToString());
-            textBox3.Text = (dataoperations[1, index].Value.ToString());
-            textBox2.Text = (dataoperations[3, index].Value.ToString());
-            textBox4.Text = (dataoperations[4, index].Value.ToString());
+            comboBox1.Text = (dataoperations[3, index].Value.ToString());
+            list.Text = (dataoperations[1, index].Value.ToString());
+            textBox3.Text = (dataoperations[6, index].Value.ToString());
+            textBox2.Text = (dataoperations[8, index].Value.ToString());
+            operat.Text = (dataoperations[4, index].Value.ToString());
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -430,7 +505,7 @@ namespace Free_money
                 {
                     index = cell.RowIndex;
                 }
-                string choose_operation = (dataoperations[5, index].Value.ToString());
+                string choose_operation = (dataoperations[2, index].Value.ToString());
                 string delQuery = $"DELETE FROM money_operations WHERE id_money_operations = {choose_operation}";
                 cmd = new SqlCommand(delQuery, connection);
                 cmd.ExecuteNonQuery();
@@ -447,6 +522,38 @@ namespace Free_money
         {
             try
             {
+                int crit = 1;
+                int oper = 1;
+                if (operat.Text == "Доход")
+                {
+                    oper = 1;
+                }
+                else oper = 2;
+                if (comboBox1.Text == "Зарплата")
+                {
+                    crit = 1;
+                }
+                else if (currency.Text == "Подарок")
+                {
+                    crit = 2;
+                }
+                else if (currency.Text == "Оплата проезда")
+                {
+                    crit = 3;
+                }
+                else if (currency.Text == "Оплата кафе")
+                {
+                    crit = 4;
+                }
+                else if (currency.Text == "Оплата дома")
+                {
+                    crit = 5;
+                }
+                else if (currency.Text == "Оплата продуктов")
+                {
+                    crit = 6;
+                }
+                else crit = 1;
                 connection = new SqlConnection(connectionString);
                 connection.Open();
                 int index = 0;
@@ -454,8 +561,8 @@ namespace Free_money
                 {
                     index = cell.RowIndex;
                 }
-                string choose_operation = (dataoperations[5, index].Value.ToString());
-                string delQuery = $"update money_operations set critetion=N'{textBox1.Text}',sum={textBox3.Text},commentary=N'{textBox2.Text}',operation={textBox4.Text} where id_money_operations={choose_operation} ";
+                string choose_operation = (dataoperations[1, index].Value.ToString());
+                string delQuery = $"update money_operations set id_critetion=N'{crit}',sum={textBox3.Text},commentary=N'{textBox2.Text}',id_operation={oper} where id_money_operations={choose_operation} ";
                 cmd = new SqlCommand(delQuery, connection);
                 cmd.ExecuteNonQuery();
                 connection.Close();
@@ -584,5 +691,15 @@ namespace Free_money
         {
             pictureBox4.Image = Properties.Resources.close;
         }
+
+        private void textBox10_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsNumber(e.KeyChar) || (!string.IsNullOrEmpty(operat.Text) && e.KeyChar == ','))
+            {
+                return;
+            }
+            e.Handled = true;
+        }
+
     }
 }

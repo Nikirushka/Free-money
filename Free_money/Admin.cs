@@ -185,7 +185,7 @@ namespace Free_money
                     Edit_Phone.Text = reader.GetString(8).Trim();
                     Age.Text = reader.GetInt32(9).ToString() + " лет";
                     Edit_Age.Text = reader.GetInt32(9).ToString();
-                    DateRegAndStatus.Text = "Дата регистрации : " + reader.GetDateTime(10).ToShortDateString() + " Статус : Админ";
+                    DateRegAndStatus.Text = " Статус : Админ";
                 }
                 connection.Close();
             }
