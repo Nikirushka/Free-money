@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -157,6 +159,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(42)))), ((int)(((byte)(63)))));
+            this.panel1.Controls.Add(this.label24);
+            this.panel1.Controls.Add(this.label23);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
@@ -171,6 +175,36 @@
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label24.Font = new System.Drawing.Font("Comic Sans MS", 13.8F);
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(164)))));
+            this.label24.Location = new System.Drawing.Point(15, 306);
+            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(145, 26);
+            this.label24.TabIndex = 10;
+            this.label24.Text = "Печать людей";
+            this.label24.Visible = false;
+            this.label24.Click += new System.EventHandler(this.label24_Click);
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label23.Font = new System.Drawing.Font("Comic Sans MS", 13.8F);
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(172)))), ((int)(((byte)(164)))));
+            this.label23.Location = new System.Drawing.Point(12, 341);
+            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(148, 26);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "Резервная Copy";
+            this.label23.Visible = false;
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // label8
             // 
@@ -1831,5 +1865,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
     }
 }

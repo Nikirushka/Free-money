@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -156,6 +157,8 @@ namespace Free_money
             Operations.Hide();
             connect_user();
             connect_people();
+            label23.Show();
+            label24.Show();
         }
         private void connect_user()
         {
@@ -279,7 +282,7 @@ namespace Free_money
             }
             try
             {
-                string query = $"select Critetion,Sum,Date,Commentary,Operation,ID_money_operations from Money_operations join wallet on Wallet.ID_wallet=Money_operations.ID_wallet join users on users.ID_user=Wallet.ID_user";
+                string query = $"select * from info_about_your_operations";
                 dataoperations.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dataoperations.AllowUserToAddRows = false;
 
@@ -824,6 +827,51 @@ namespace Free_money
         private void pictureBox4_MouseLeave(object sender, EventArgs e)
         {
             pictureBox4.Image = Properties.Resources.close;
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|Free_money.mdf';Integrated Security=True;Connect Timeout=30");
+
+            // Открыть соединение с базой данных
+            conn.Open();
+
+            // Создать объект SqlCommand, используя строку запроса для резервного копирования базы данных
+            SqlCommand cmd = new SqlCommand("BACKUP DATABASE Free_money TO DISK = '\\Free_money.bak'", conn);
+
+            // Указать объект SqlConnection в качестве свойства Connection объекта SqlCommand
+            cmd.Connection = conn;
+
+            // Выполнить запрос
+            cmd.ExecuteNonQuery();
+
+            // Закрыть соединение с базой данных
+            conn.Close();
+
+            // Сообщить пользователю, что резервное копирование завершено
+            MessageBox.Show("Резервное копирование базы данных Free_money выполнено успешно.");
+        }
+
+        void label24_Click1(object sender, PrintPageEventArgs e)
+        {
+            // Получаем графический контекст
+            Graphics g = e.Graphics;
+            // Создаем объект Bitmap с размерами dataGridView
+            Bitmap bmp = new Bitmap(datapeople.Size.Width + 10, datapeople.Size.Height + 10);
+            // Рисуем содержимое dataGridView на Bitmap
+            datapeople.DrawToBitmap(bmp, datapeople.Bounds);
+            // Рисуем Bitmap на странице
+            g.DrawImage(bmp, 0, 0);
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+            // Создаем объект PrintDocument
+            PrintDocument printDocument = new PrintDocument();
+            // Подписываемся на событие PrintPage
+            printDocument.PrintPage += new PrintPageEventHandler(label24_Click1);
+            // Запускаем процесс печати
+            printDocument.Print();
         }
     }
 }
